@@ -5,8 +5,8 @@ do{
 } while(!is_numeric($firstNumber));
 
 do{
-fwrite(STDOUT, "Ending Number: ");
-$secondNumber = trim(fgets(STDIN));
+	fwrite(STDOUT, "Ending Number: ");
+	$secondNumber = trim(fgets(STDIN));
 } while(!is_numeric($secondNumber));
 
 if($firstNumber < $secondNumber){
@@ -18,8 +18,7 @@ if($firstNumber < $secondNumber){
 	for($firstNumber; $firstNumber <= $secondNumber; $firstNumber += $increment){
 		echo "$firstNumber\n";
 	}
-}
-else {
+} elseif ($firstNumber > $secondNumber){
 	fwrite(STDOUT, "Decrement by: ");
 	$decrement = trim(fgets(STDIN));
 
@@ -28,5 +27,7 @@ else {
 	for($firstNumber; $firstNumber >= $secondNumber; $firstNumber -= $decrement){
 		echo "$firstNumber\n";
 	}	
+} else {
+	echo "Same numbers entered\n";
 }
 
