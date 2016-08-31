@@ -21,7 +21,7 @@ if($firstNumber < $secondNumber){				//if first number is less than second incre
 	for($firstNumber; $firstNumber <= $secondNumber; $firstNumber += $increment){	//outputs numbers
 		echo "$firstNumber\n";
 	}
-} else {		//if first numer is bigger than second decrement
+} else {										//if first numer is bigger than second decrement
 	fwrite(STDOUT, "Decrement by: ");
 	$decrement = trim(fgets(STDIN));
 
