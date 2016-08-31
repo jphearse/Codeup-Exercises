@@ -5,9 +5,7 @@ $things = array('Sgt. Pepper', "11", null, array(1,2,3), 3.14, "12 + 7", false, 
 foreach ($things as $thing){
     if (is_array($thing)) {
         echo gettype($things) . " (";
-        	foreach ($thing as $number){
-        		echo  $number;
-        	}
+        echo  implode(",",$thing); 	
         echo ")\n";
     } elseif (is_scalar($thing)) {
        echo "$thing\n";
