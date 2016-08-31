@@ -24,8 +24,10 @@ $books = array(
 );
 
 foreach ($books as $book => $title){
-    echo "$book\n";
-    foreach ($title as $content => $value) {
-        echo "  $content: $value\n";
-    }
+        if ("{$title['published']}" > 1950){
+            echo "$book\n";
+        foreach ($title as $content => $value) {
+            echo "  $content: $value\n";
+        }
+    }    
 }
