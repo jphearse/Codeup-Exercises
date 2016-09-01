@@ -19,11 +19,16 @@ function divide($a, $b)
 {
 	return $a / $b;
 }
+function modulus($a, $b)
+{
+	return $a / $b;
+}
 
-$number1 = 20;
-$number2 = 10;
+$a = 20;
+$b = 10;
 
-echo add($number1, $number2) .PHP_EOL;
-echo subtract($number1, $number2) .PHP_EOL;
-echo multiply($number1, $number2) .PHP_EOL;
-echo divide($number1, $number2) .PHP_EOL;
+echo add($a, $b) .PHP_EOL;
+echo subtract($a, $b) .PHP_EOL;
+echo multiply($a, $b) .PHP_EOL;
+echo divide($a, $b) .PHP_EOL;
+echo modulus($a, $b) .PHP_EOL;
