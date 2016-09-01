@@ -75,7 +75,7 @@ function errorNotNumber(){
 }
 
 $a = 20;
-$b = "hi";
+$b = 45;
 
 echo "First Number: $a Second Number: $b" . PHP_EOL;
 echo "Add: ". add($a, $b) .PHP_EOL;
