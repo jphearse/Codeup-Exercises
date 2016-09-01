@@ -30,6 +30,7 @@ function inspect($passed){
 		echo "	The value is $type\n";
 	}
 }
+
 // Do not mofify these variables!
 $string1 = "I'm a little teapot";
 $string2 = '';
