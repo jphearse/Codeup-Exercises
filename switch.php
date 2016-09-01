@@ -5,8 +5,7 @@
 
  // Get Day of Week as number
  // 1 (for Monday) through 7 (for Sunday)
- $dayOfWeek = date(4);
-// echo $dayOfWeek;
+ $dayOfWeek = date("N");
  switch($dayOfWeek) {
      case "1":
          echo "Monday" . PHP_EOL;
