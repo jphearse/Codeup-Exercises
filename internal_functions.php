@@ -4,13 +4,9 @@
 function inspect($passed){
 		$type = gettype($passed);
 		$value = $passed;
+
 	if (is_numeric($passed)) {
-		if ($type == "double"){
-			$value = doubleval($value);
-			echo "	The $type is $value\n";
-		} else{
-			echo "	The $type is $value\n";
-		}
+		echo "	The $type is $value\n";
 	} elseif (is_bool($passed)) {
 		if ($passed == 0) {
 			$value = 'false';
