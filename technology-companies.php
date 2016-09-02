@@ -46,16 +46,17 @@ $companies = [
 ];
 // ksort($companies);       //sort companies
 
-// foreach ($companies as $company => $key) {
-//     asort($key);    
-//     // print_r($key);                //sort people in each company
-//     echo($company) . PHP_EOL;
-//     foreach ($key as $person => $people) {
-//         echo "--".$people . PHP_EOL;
-//     }  
-// }
+foreach ($companies as $company => $key) {
+    asort($key);    
+    // print_r($key);                 //sort people in each company
+        $companies[$company] = $key;
+    echo($company) . PHP_EOL;
+    foreach ($key as $person => $people) {
+        echo "--".$people . PHP_EOL;
+    }  
+}
 
 
-arsort($companies);       //sort by biggest to smallest
+// arsort($companies);       //sort by biggest to smallest
 
-var_dump($companies);
+// var_dump($companies);
