@@ -44,9 +44,18 @@ $companies = [
         'Jean-Louis Gassée'
     ]
 ];
+// ksort($companies);       //sort companies
 
-foreach ($companies as $company) {
-    asort($company);
-    print_r($company);
-}
-// ksort($companies);
+// foreach ($companies as $company => $key) {
+//     asort($key);    
+//     // print_r($key);                //sort people in each company
+//     echo($company) . PHP_EOL;
+//     foreach ($key as $person => $people) {
+//         echo "--".$people . PHP_EOL;
+//     }  
+// }
+
+
+arsort($companies);       //sort by biggest to smallest
+
+var_dump($companies);
