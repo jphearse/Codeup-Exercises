@@ -25,6 +25,7 @@ function parseContacts($filename)
 		array_push($contacts, $associativeArray);
 		array_shift($contacts);
 
+		fclose($handle);
 		}
     return $contacts;
 }
