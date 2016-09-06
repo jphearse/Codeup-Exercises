@@ -13,8 +13,18 @@ function parseContacts($filename)
 	foreach ($contacts as $contact) {
 		$newArray = explode("|", $contact);
 
-		array_push($contacts, $newArray);
+		$associativeArray = [];
+		$associativeArray["name"] = $newArray[0];
+		
+		$areacode = substr($newArray[1], 0, 3);
+		$prefix   = substr($newArray[1], 3, 3);
+		$number   = substr($newArray[1], 6, 4);
+	
+		$associativeArray["phone"] = "$areacode-$prefix-$number";;
+
+		array_push($contacts, $associativeArray);
 		array_shift($contacts);
+
 		}
     return $contacts;
 }
