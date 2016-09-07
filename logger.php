@@ -3,7 +3,7 @@
 function logMessage($logLevel, $message)
 {
     // todo - complete this function
-    $filename = date('Y-m-d') . '.log';
+    $filename = "log-". date('Y-m-d') . '.log';
 	$handle = fopen($filename, 'a');
 	
 	date_default_timezone_set('America/Chicago');
