@@ -7,7 +7,6 @@ class Log
 	public function logMessage($logLevel, $message)
 	{
 	    // todo - complete this function
-
 		$handle = fopen($this->filename, 'a');
 		
 		date_default_timezone_set('America/Chicago');
