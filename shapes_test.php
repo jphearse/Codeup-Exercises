@@ -1,6 +1,5 @@
 <?php
 
-require_once 'Rectangle.php';
 require_once 'Square.php';
 
 $rectangle1 = new Rectangle(6, 8);
