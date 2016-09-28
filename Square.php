@@ -13,11 +13,11 @@ class Square extends Rectangle{
 
     public function perimeter() 
 	{
-		return 'The perimeter of the Square is: ' . (($this->getHeight() + $this->getHeight()) + ($this->getWidth() + $this->getWidth())) . PHP_EOL;
+		return 'The perimeter of the Square is: ' . (($this->getHeight() + $this->getHeight()) + ($this->getHeight() + $this->getHeight())) . PHP_EOL;
 	}
 	public function area() 
 	{
-		return 'The area of the Square is: ' . ($this->getHeight() * $this->getWidth()) . PHP_EOL;
+		return 'The area of the Square is: ' . ($this->getHeight() * $this->getHeight()) . PHP_EOL;
 	}
 
 
