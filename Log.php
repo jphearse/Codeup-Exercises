@@ -2,17 +2,26 @@
 
 class Log 
 {
-	public $filename;
-	public $handle;
-	function __construct ($prefix = 'log')
-	{	
-		$this->filename = $prefix ."-". date('Y-m-d') . '.log';
+	private $filename;
+	private $handle;
+	public function __construct($prefix = 'log') 
+	{
+		$this->setFilename($prefix);
+		$this->setHandle($prefix);
+	}
+	private function setFilename($prefix)
+	{
+		$this->filename = "{$prefix}-" . date('Y-m-d') . ".log";
+	}
+	private function setHandle()
+	{
 		$this->handle = fopen($this->filename, 'a');
 	}
-
-	function __destruct(){
+	public function __destruct()
+	{
 		fclose($this->handle);
 	}
+
 
 	public function logMessage($logLevel, $message)
 	{		
